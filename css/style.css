@@ -1,0 +1,177 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+@media (max-width: 768px) {
+  html {
+    margin: 0;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header_accueil img {
+    margin-left: 25%;
+    width: 55%;
+    margin-top: 5%;
+  }
+  .header_localisation {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 225, 225);
+    box-shadow: 0px 0px 10px 0px;
+    width: 100%;
+    margin-top: 5%;
+    padding-right: 5%;
+  }
+  .header_localisation i {
+    padding-top: 4%;
+    margin-right: 3%;
+  }
+  .recherche_restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+  }
+  .recherche_restaurant h3 {
+    margin-left: 17%;
+  }
+  .recherche_restaurant p {
+    margin-left: 20%;
+    margin-right: 3%;
+  }
+  .recherche_restaurant input {
+    padding: 4%;
+    border-radius: 30px 30px 30px 30px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    border: none;
+    margin-bottom: 10%;
+    box-shadow: 0px 10px 10px 0px;
+  }
+  .carte_fonctionnement {
+    display: flex;
+    flex-direction: row;
+    background-color: #F2F2F2;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 7px 0px;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+  .carte_fonctionnement i {
+    padding-top: 6%;
+    margin-right: 5%;
+    margin-left: 5%;
+    color: grey;
+  }
+  .carte_fonctionnement :hover {
+    color: #9356DC;
+  }
+  .carte_fonctionnement p {
+    background-color: #9356DC;
+    border-radius: 50%;
+    color: white;
+    width: 20px;
+    position: relative;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carte_fonctionnement:hover {
+    background-color: #e2d5f1;
+  }
+  .restaurants {
+    width: 100%;
+    background-color: #F2F2F2;
+  }
+  .restaurants .carte_restaurant {
+    width: 100%;
+    height: 35%;
+    border-radius: 20px 20px 20px 20px;
+    position: relative;
+  }
+  .restaurants .carte_restaurant .img_carte {
+    overflow: hidden;
+  }
+  .restaurants .carte_restaurant .img_carte img {
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .restaurants .carte_restaurant .img_carte .bas_carte {
+    margin-top: 20%;
+  }
+  .restaurants .carte_restaurant_nouveau ::after {
+    content: "Nouveau";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    color: #299077;
+    background-color: #99e2d0;
+    gap: 0;
+  }
+  footer {
+    background-color: rgb(44, 40, 40);
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  footer img {
+    color: white;
+    width: 30%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  footer i {
+    margin-right: 4%;
+  }
+  footer a {
+    margin-left: 5%;
+    margin-top: 4%;
+  }
+  .header_francaise {
+    display: flex;
+  }
+  .header_francaise img {
+    width: 55%;
+    margin-left: 15%;
+    margin-top: 5%;
+  }
+  .header_francaise a {
+    margin-top: 8%;
+    color: rgb(85, 84, 84);
+    margin-left: 5%;
+  }
+  .header_francaise a :hover {
+    color: #9356DC;
+  }
+  .background {
+    background-image: url("../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    width: 80%;
+  }
+  .titre {
+    display: flex;
+    justify-content: space-around;
+  }
+  .titre i {
+    padding-top: 8%;
+  }
+}/*# sourceMappingURL=style.css.map */
