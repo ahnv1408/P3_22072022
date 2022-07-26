@@ -3,8 +3,12 @@ body {
     padding: 0%;
     box-sizing: border-box;
 }
+
 h1 {
     font-family: 'Shrikhand', cursive;
+}
+a {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -31,12 +35,6 @@ h1 {
         box-shadow: 0px 10px 10px 0px;
     }
 
-    @mixin logo_header {
-        width: 55%;
-        margin-left: 15%;
-        margin-top: 5%;
-    }
-
     @mixin fleche_header {
         margin-top: 8%;
         color: rgb(85, 84, 84);
@@ -48,15 +46,20 @@ h1 {
 
     // HEADER
 
-    .header_localisation {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(230, 225, 225);
-        box-shadow: 0px 0px 10px 0px;
-        width: 100%;
-        margin-top: 5%;
-        padding-right: 5%;
-        i {
+    .h {
+        & h1 {
+            font-family: 'Shrikhand', cursive;
+        }
+        &__localisation {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(230, 225, 225);
+            box-shadow: 0px 0px 10px 0px;
+            width: 100%;
+            margin-top: 5%;
+            padding-right: 5%; 
+        }
+        &__icon {
             padding-top: 4%;
             margin-right: 3%;
         }
@@ -75,32 +78,35 @@ h1 {
             margin-left: 20%;
             margin-right: 3%;
         }
-        input {
+        & input {
             @include bouton()
         }
     }
 
-    .carte_fonctionnement {
-        display: flex;
-        flex-direction: row;
-        background-color: #F2F2F2;
-        border-radius: 20px 20px 20px 20px;
-        box-shadow: 0px 0px 7px 0px;
-        margin-top: 10%;
-        margin-left: 10%;
-        margin-bottom: 15%;
-       
-        i {
+    .fonctionnement {
+        &__carte {
+            display: flex;
+            flex-direction: row;
+            background-color: #F2F2F2;
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 0px 0px 7px 0px;
+            margin-top: 10%;
+            margin-left: 10%;
+            margin-bottom: 15%;
+            &:hover {
+                background-color: #e2d5f1;
+            }
+        }
+        &__icon {
             padding-top: 6%;
             margin-right: 5%;
             margin-left: 5%;
             color: grey;
+            &:hover {
+                color: #9356DC;
+            }
         }
-        :hover {
-            color: #9356DC;
-        }
-
-        p {
+        &__numero {
             background-color: #9356DC;
             border-radius: 50%;
             color: white;
@@ -111,60 +117,56 @@ h1 {
             justify-content: center;
             align-items: center;
         }
-     
     }
-
-    .carte_fonctionnement:hover {
-        background-color: #e2d5f1;
-    }
-
+    
     .restaurants {
-        width: 100%;
+        // width: 100%;
         background-color: #F2F2F2;
-        .carte_restaurant {
-            width: 100%;
-            height: 35%;
+        margin-left: 5%;
+        &__carte {
+            width: 95%;
+            // height: 250px;
+            background-color: white;
             border-radius: 20px 20px 20px 20px;
-            position: relative;
-            .img_carte {
-                overflow: hidden;
-                img {
-                    width: 100%;
-                    border-radius: 20px 20px 20px 20px;
-                    object-fit: cover;          
-                }
-                .bas_carte {
-                    margin-top: 20%;
-                }
+            box-shadow: 0px 0px 7px 0px;
+            border: 3px solid black;
+            margin-bottom: 5%;
+            &::before {
+                content: "Nouveau";
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: rgb(136, 226, 0);
+                color: green;
+                box-shadow: 1px 1px 20px black;
+            }
         }
+        &__img {
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
         }
-        .carte_restaurant_nouveau ::after {
-            content: "Nouveau";
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            position: absolute;
-            font-size: 14px;
-            font-weight: 600;
-            color: #299077;
-            background-color: #99e2d0;
-            gap: 0;
-
+        &__carte__bas {
+            margin-top: 3%;
+            margin-bottom: 15%;
+            & h3 {
+                margin-bottom: 0%;
+            }
+            & p {
+                margin-top: 0%;
+            }
         }
     }
+ 
 
     footer {
         background-color: rgb(44, 40, 40);
         display: flex;
         flex-direction: column;
         color: white;
-        img {
-            color: white;
-            width: 30%;
-            object-fit: cover;
-            padding-top: 5%;
-            margin-bottom: 5%;
-            margin-left: 5%;
+        h3 {
+            font-family: 'Shrikhand', cursive ;
+            margin-left: 15%;
         }
         i {
             margin-right: 4%;
@@ -174,18 +176,10 @@ h1 {
             margin-top: 4%;
         }
     }
+}
 
     // PAGE A LA FRANCAISE 
 
-    .header_francaise {
-        display: flex;
-        img {
-           @include logo_header()
-        }
-        a {
-            @include fleche_header()
-        }
-    }
 
     .background {
         background-image: url("../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
@@ -204,4 +198,3 @@ h1 {
 
 
     
-}
