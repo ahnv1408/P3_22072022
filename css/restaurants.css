@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", sans-serif;
 }
 
 .h_restaurants {
@@ -28,6 +28,7 @@ h1 {
   max-width: 100%;
   max-height: 32rem;
   width: 100%;
+  min-width: 360px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -36,6 +37,7 @@ h1 {
   font-size: 50px;
   display: flex;
   justify-content: space-around;
+  border-radius: 40px 40px 40px 40px;
 }
 .titre i {
   padding-top: 6%;
@@ -43,11 +45,17 @@ h1 {
 
 .carte {
   border-radius: 20px 20px 20px 20px;
-  box-shadow: 0px 0px 15px 0px;
+  box-shadow: 5px 5px 15px 0px #dedddd;
+  max-height: 100px;
   padding-top: 1px;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   margin-left: 3%;
   margin-right: 3%;
+  overflow: hidden;
+  -webkit-animation-name: affichage;
+          animation-name: affichage;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .carte h3 {
   margin-bottom: 0%;
@@ -62,142 +70,292 @@ h1 {
 .carte__prix p {
   margin-top: 1%;
 }
-
-.titre_plat {
-  margin-left: 4%;
+.carte__prix .animation_check {
+  background-color: #99E2D0;
+  width: 100px;
+  height: 100px;
+  margin-top: -47px;
+  margin-right: -140px;
+  margin-left: 0%;
+  border-radius: 0px 20px 20px 0px;
 }
-
-.bouton {
+.carte__prix i {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.carte:hover .animation_check {
+  margin-right: -40px;
+}
+.carte:hover i {
+  transform: scale(0);
+  -webkit-animation: rotation 2s;
+          animation: rotation 2s;
+}
+@-webkit-keyframes rotation {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@-webkit-keyframes affichage {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+@keyframes affichage {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+.carte .titre_plat {
+  margin-left: 4%;
+  margin-bottom: 0%;
+}
+.carte .bouton {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.bouton input {
+.carte .bouton input {
   padding: 2%;
   border-radius: 60px 60px 60px 60px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   border: none;
   margin-bottom: 5%;
+  margin-top: 4%;
   box-shadow: 0px 10px 10px 0px;
   font-size: 200%;
 }
-.bouton input:hover {
+.carte .bouton input:hover {
   background: linear-gradient(#f7a4df, #af7eec);
 }
-
-footer {
+.carte section {
+  margin-top: -4rem;
+  border-radius: 50px 50px 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+.carte .trait_entrees {
+  background-color: #99E2D0;
+  width: 45px;
+  height: 4px;
+  margin-bottom: 2%;
+  margin-left: 4%;
+}
+.carte .trait_plats {
+  background-color: #99E2D0;
+  width: 38px;
+  height: 4px;
+  margin-bottom: 2%;
+  margin-left: 4%;
+}
+.carte .trait_desserts {
+  background-color: #99E2D0;
+  width: 45px;
+  height: 4px;
+  margin-bottom: 2%;
+  margin-left: 4%;
+}
+.carte footer {
   background-color: rgb(44, 40, 40);
   display: flex;
   flex-direction: column;
   color: white;
 }
-footer h3 {
+.carte footer h3 {
   font-family: "Shrikhand", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer i {
+.carte footer i {
   margin-right: 0.5%;
 }
-footer a {
+.carte footer a {
   margin-left: 4%;
   margin-top: 1%;
 }
-
 @media (max-width: 768px) {
-  h1 {
-    font-family: "Shrikhand", cursive;
-  }
-  .h_restaurants {
+  .carte .h_restaurants {
     display: flex;
     flex-direction: row;
   }
-  .h_restaurants__titre {
+  .carte .h_restaurants__titre {
     font-size: 30px;
     margin-left: 20%;
     text-shadow: none;
   }
-  .h_restaurants__fleche {
+  .carte .h_restaurants__fleche {
     padding-top: 9%;
     padding-left: 5%;
     font-weight: bold;
   }
-  .bg_image {
+  .carte .bg_image {
     max-width: 100%;
     max-height: 32rem;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .titre {
+  .carte .img_enchante {
+    max-height: 15rem;
+    -o-object-position: 70% 77%;
+       object-position: 70% 77%;
+  }
+  .carte .titre {
     font-size: 18px;
   }
-  .titre i {
+  .carte .titre i {
     padding-top: 10%;
   }
-  .carte {
+  .carte .carte {
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 0px 0px 15px 0px;
+    box-shadow: 5px 5px 15px 0px #dedddd;
     padding-top: 1px;
     margin-bottom: 5%;
     margin-left: 3%;
     margin-right: 3%;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-animation-name: affichage;
+            animation-name: affichage;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
-  .carte h3 {
+  .carte .carte h3 {
     margin-bottom: 0%;
     margin-left: 2%;
   }
-  .carte__prix {
+  .carte .carte__prix {
     display: flex;
     justify-content: space-between;
     margin-left: 2%;
     margin-right: 2%;
   }
-  .carte__prix p {
+  .carte .carte__prix p {
     margin-top: 1%;
   }
-  .titre_plat {
-    margin-left: 5%;
+  .carte .carte:hover .animation_check {
+    margin-right: -15px;
+    margin-left: 5px;
   }
-  .bouton {
+  @-webkit-keyframes affichage {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes affichage {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+  .carte .titre_plat {
+    margin-left: 5%;
+    margin-bottom: 0%;
+    margin-top: 10%;
+  }
+  .carte .bouton {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .bouton input {
+  .carte .bouton input {
     padding: 5%;
     border-radius: 30px 30px 30px 30px;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     border: none;
-    margin-bottom: 5%;
+    margin-bottom: 12%;
+    margin-top: 12%;
     box-shadow: 0px 10px 10px 0px;
     font-size: 100%;
   }
-  footer {
+  .carte footer {
     background-color: rgb(44, 40, 40);
     display: flex;
     flex-direction: column;
     color: white;
   }
-  footer h3 {
+  .carte footer h3 {
     font-family: "Shrikhand", cursive;
     margin-left: 6%;
   }
-  footer i {
+  .carte footer i {
     margin-right: 4%;
   }
-  footer a {
+  .carte footer a {
     margin-left: 5%;
     margin-top: 4%;
   }
-  .francaise .palette .delice .enchante {
+  .carte section {
     margin-top: -4rem;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 50px 50px 0 0;
     background-color: #f6f6f6;
     z-index: 1;
     position: relative;
+  }
+  .carte .trait_entrees {
+    background-color: #99E2D0;
+    width: 45px;
+    height: 4px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  .carte .trait_plats {
+    background-color: #99E2D0;
+    width: 38px;
+    height: 4px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  .carte .trait_desserts {
+    background-color: #99E2D0;
+    width: 45px;
+    height: 4px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .carte .h_restaurants__titre {
+    margin-left: 23%;
+  }
+  .carte .carte:hover .animation_check {
+    margin-right: -18px;
   }
 }/*# sourceMappingURL=restaurants.css.map */

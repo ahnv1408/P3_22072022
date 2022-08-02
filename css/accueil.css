@@ -5,16 +5,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-}
-
 a {
   text-decoration: none;
 }
 
 .h h1 {
-  font-family: "Shrikhand", cursive;
   display: flex;
   justify-content: center;
   text-shadow: 1px 1px 1px #9356DC;
@@ -48,7 +43,7 @@ a {
   align-items: center;
   margin-top: 2%;
 }
-.recherche_restaurant button {
+.recherche_restaurant input {
   padding: 1%;
   border-radius: 30px 30px 30px 30px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -57,7 +52,7 @@ a {
   margin-bottom: 2%;
   box-shadow: 0px 10px 10px 0px;
 }
-.recherche_restaurant button:hover {
+.recherche_restaurant input:hover {
   background: linear-gradient(#f7a4df, #af7eec);
 }
 
@@ -76,6 +71,7 @@ a {
   box-shadow: 0px 0px 10px 0px #9356DC;
   text-shadow: 1px 1px 1px #9356DC;
   letter-spacing: 3px;
+  font-family: "Roboto", sans-serif;
 }
 .fonctionnement__carte {
   display: flex;
@@ -124,6 +120,7 @@ a {
   display: flex;
   justify-content: center;
   text-shadow: 1px 1px 1px #9356DC;
+  font-family: "Roboto", sans-serif;
 }
 .restaurants__flex {
   display: flex;
@@ -163,9 +160,33 @@ a {
 .restaurants__carte__bas p {
   margin-top: 0%;
 }
-.restaurants__carte__bas i {
-  width: 50px;
+.restaurants__carte__bas .heart {
+  margin-right: 8%;
   padding-top: 6%;
+  cursor: pointer;
+}
+.restaurants__carte__bas .heart i {
+  position: absolute;
+}
+.restaurants__carte__bas .heart .jauge {
+  position: absolute;
+  top: 178px;
+}
+.restaurants__carte__bas .heart .jauge_remplissage {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 178px;
+  opacity: 0;
+  color: transparent;
+  transition: all 2s ease-in-out;
+}
+.restaurants__carte__bas .heart:active .jauge_remplissage {
+  opacity: 1;
+}
+.restaurants__carte__bas .heart:active .jauge {
+  opacity: 0;
 }
 .restaurants .nouveau::before {
   content: "Nouveau";
@@ -186,9 +207,7 @@ footer {
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 5%;
 }
 footer i {
   margin-right: 0.5%;
@@ -220,10 +239,9 @@ footer a {
     text-shadow: none;
     background-color: rgb(230, 225, 225);
     box-shadow: 0px 0px 10px 0px;
-    width: 100%;
+    width: 95%;
     height: 60px;
     margin-top: 7%;
-    padding-right: 5%;
   }
   .h__icon {
     padding-top: 4%;
@@ -235,13 +253,6 @@ footer a {
     justify-content: center;
     align-items: center;
     background-color: #F2F2F2;
-  }
-  .recherche_restaurant h3 {
-    margin-left: 17%;
-  }
-  .recherche_restaurant p {
-    margin-left: 20%;
-    margin-right: 3%;
   }
   .recherche_restaurant input {
     padding: 4%;

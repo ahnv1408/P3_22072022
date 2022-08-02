@@ -5,18 +5,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-    font-family: 'Shrikhand', cursive;
-}
 a {
     text-decoration: none;
 }
 
 //  VERSION DESKTOP
 
+// Header
 .h {
     & h1 {
-        font-family: 'Shrikhand', cursive;
         display: flex;
         justify-content: center;
         text-shadow: 1px 1px 1px #9356DC;
@@ -28,6 +25,7 @@ a {
         justify-content: center;
         border-top: 2px solid #FF79DA;
         border-bottom: 2px solid #FF79DA;
+        // Effets juste pour la version desktop
         box-shadow: 0px 0px 10px 0px #9356DC;
         text-shadow: 1px 1px 1px #9356DC;
         width: 100%;
@@ -44,13 +42,15 @@ a {
     }
 }
 
+// Main 
+
 .recherche_restaurant {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2%;
-    & button {
+    & input {
         padding: 1%;
         border-radius: 30px 30px 30px 30px;
         background: linear-gradient(#FF79DA, #9356DC);
@@ -77,9 +77,11 @@ a {
         padding-bottom: 2%;
         border-top: 2px solid #FF79DA;
         border-bottom: 2px solid #FF79DA;
+        // Effets pour la version desktop
         box-shadow: 0px 0px 10px 0px #9356DC;
         text-shadow: 1px 1px 1px #9356DC;
-        letter-spacing: 3px;        
+        letter-spacing: 3px;      
+        font-family: 'Roboto', sans-serif;  
     }
     &__carte {
         display: flex;
@@ -93,6 +95,7 @@ a {
         margin-right: 3%;
         margin-left: 2%;
         &:hover {
+            // Arrière-plan en couleur lors du survol 
             background-color: #e2d5f1;
         }
     }
@@ -102,6 +105,7 @@ a {
         margin-left: 5%;
         color: grey;
         &:hover {
+            // Arrière-plan en couleur lors du survol
             color: #9356DC;
         }
     }
@@ -111,6 +115,7 @@ a {
         color: white;
         width: 30px;
         position: relative;
+        // Permet de décaler notre numéro sur la gauche du conteneur, à cheval 
         left: -15px;
         display: flex;
         justify-content: center;
@@ -128,6 +133,7 @@ a {
         display: flex;
         justify-content: center;
         text-shadow: 1px 1px 1px #9356DC;
+        font-family: 'Roboto', sans-serif;
     }
     &__flex {
         display: flex;
@@ -164,13 +170,43 @@ a {
         & p {
             margin-top: 0%;
         }
-        & i {
-            width: 50px;
-            padding-top: 6%;
-            
+
+        & .heart {
+            margin-right: 8%;
+            padding-top: 6%; 
+            cursor: pointer;         
+        
+        & i {           
+            position: absolute;
         }
+        & .jauge {
+            position: absolute;
+            top: 178px;
+        }
+            
+            & .jauge_remplissage {    
+                background-image:  linear-gradient(#FF79DA, #9356DC);
+                -webkit-background-clip: text;
+                background-clip: text;              
+                position: absolute;
+                top: 178px;
+                opacity: 0;
+                color: transparent;
+                transition: all 2s ease-in-out;
+            }
+
+            &:active .jauge_remplissage {
+                opacity: 1;
+            }
+            &:active .jauge {
+                opacity: 0;
+            }
+    
+    }
     }
 
+
+    //  Affichage étiquettes "nouveau" en haut à droite de la carte
     .nouveau {
         &::before {
             content: "Nouveau";
@@ -182,9 +218,8 @@ a {
             background-color: rgb(123, 246, 209);
             color: green;
         }
-    }    
+    } 
 }
-
 
 footer {
     background-color: rgb(44, 40, 40);
@@ -193,9 +228,7 @@ footer {
     color: white;
     h3 {
         font-family: 'Shrikhand', cursive ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left: 5%;
     }
     i {
         margin-right: 0.5%;
@@ -258,10 +291,9 @@ footer {
             text-shadow: none;
             background-color: rgb(230, 225, 225);
             box-shadow: 0px 0px 10px 0px;
-            width: 100%;
+            width: 95%;
             height: 60px;
             margin-top: 7%;
-            padding-right: 5%; 
         }
         &__icon {
             padding-top: 4%;
@@ -275,13 +307,6 @@ footer {
         justify-content: center;
         align-items: center;
         background-color: #F2F2F2;
-        & h3 {
-            margin-left: 17%;
-        }
-        & p {
-            margin-left: 20%;
-            margin-right: 3%;
-        }
         & input {
             @include bouton()
         }
