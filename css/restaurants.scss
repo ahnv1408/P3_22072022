@@ -123,7 +123,6 @@ h1 {
     margin-bottom: 0%;
 }
 
-
 .bouton {
     display: flex;
     justify-content: center;
@@ -238,6 +237,7 @@ footer {
     }
 }
 
+
 .carte {
     border-radius: 20px 20px 20px 20px;
     box-shadow: 5px 5px 15px 0px #dedddd;
@@ -248,41 +248,60 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    position: relative;
     animation-name: affichage;
-    animation-duration: 2s;
-    & h3 {
-        margin-bottom: 0%;
-        margin-left: 2%;
-        text-overflow: ellipsis;
-    }
-    &__texte {
-        width: 60%;
+    animation-duration: 2s; 
+        
+    & .carte__texte {
+        width: 135%;
         white-space: nowrap;
         text-overflow: ellipsis;
-    }
+        overflow: hidden;
+        & h3 {
+            width: 100%;
+            margin-bottom: 0%;
+            margin-left: 2%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;                
+        }
+        & p {
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        }
     &__prix {
         width: 40%;
         margin-left: 0%;
         margin-right: 2%;
+        // background-color: transparent;
+        
+        // background-color: transparent;
         & .price {
-            margin-top: 30%;
+            margin-top: 70%;
+            margin-left: 0;
+            margin-right: 20%;
         }
         & .animation_check {
-            margin-right: -200px;
-            width: 150px;
+            margin-right: -107px;
+            width: 100px;
+            background-color: #99E2D0;
+            height: 100%;
+            border-radius: 0px 20px 20px 0px;
         }
-    }
-    &:hover {
-        &__texte {
-            
-            text-overflow: ellipsis;
-        }
-        & .animation_check {
-            margin-right: -10px;
-            margin-left: 5px;
+        
+        &:hover {
+            & .animation_check {
+                margin-right: -10px;
+                // margin-left: 5px;
+            }
         }
     }
 }
+
 
 @keyframes affichage {
     0% {

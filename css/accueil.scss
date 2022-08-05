@@ -6,12 +6,10 @@ body {
 }
 
 a {
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 
 // LOADING SPINNER 
-
 
 .loader {
     position: fixed;
@@ -21,7 +19,7 @@ a {
     height: 100%;
     inset: 0;
     opacity: 0.9;
-    animation: chargeur 4s;
+    animation: background-loader 3s;
     animation-fill-mode: forwards;
     &::after {
         content: "";
@@ -29,6 +27,7 @@ a {
         border: 16px solid #9356DC;
         width: 200px;
         height: 200px;
+        margin-bottom: 10%;
         border-top-color: #FF79DA;
         border-bottom-color: #99E2D0;
         border-radius: 50%;
@@ -37,10 +36,13 @@ a {
 
 }
 
-@keyframes chargeur {
+@keyframes background-loader {
     0%{
         transform: scale(1);
        
+    }
+    75% {
+        transform: scale(1);
     }
 
     100% {
@@ -103,8 +105,20 @@ a {
     justify-content: center;
     align-items: center;
     margin-top: 2%;
+    & h3 {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    & .p_deux_recherche {
+        margin-bottom: 3%;
+    }
+    & p {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
     & input {
         padding: 1%;
+        margin-top: 3%;
         border-radius: 30px 30px 30px 30px;
         background: linear-gradient(#FF79DA, #9356DC);
         color: white;
@@ -316,6 +330,7 @@ footer {
         background: linear-gradient(#FF79DA, #9356DC);
         color: white;
         border: none;
+        margin-top: 7%;
         margin-bottom: 10%;
         box-shadow: 0px 10px 10px 0px;
     }
@@ -342,6 +357,7 @@ footer {
             text-shadow: none;
             background-color: rgb(230, 225, 225);
             box-shadow: 0px 0px 10px 0px;
+            margin-bottom: 0%;
             width: 95%;
             height: 60px;
             margin-top: 7%;
@@ -353,11 +369,19 @@ footer {
     }
 
     .recherche_restaurant {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-top: 0%;
         background-color: #F2F2F2;
+        & h3 {
+            margin-left: 5%;
+        }
+        & p {
+            margin-bottom: 0%;
+            margin-top: 0%;
+            margin-left: 7%;
+        }
+        & .reservez {
+            margin-top: 5%;
+        }
         & input {
             @include bouton()
         }

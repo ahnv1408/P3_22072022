@@ -246,18 +246,30 @@ footer a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    position: relative;
     -webkit-animation-name: affichage;
             animation-name: affichage;
     -webkit-animation-duration: 2s;
             animation-duration: 2s;
   }
-  .carte h3 {
+  .carte .carte__texte {
+    width: 135%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .carte .carte__texte h3 {
+    width: 100%;
     margin-bottom: 0%;
     margin-left: 2%;
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .carte__texte {
-    width: 60%;
+  .carte .carte__texte p {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -267,18 +279,19 @@ footer a {
     margin-right: 2%;
   }
   .carte__prix .price {
-    margin-top: 30%;
+    margin-top: 70%;
+    margin-left: 0;
+    margin-right: 20%;
   }
   .carte__prix .animation_check {
-    margin-right: -200px;
-    width: 150px;
+    margin-right: -107px;
+    width: 100px;
+    background-color: #99E2D0;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
   }
-  .carte:hover__texte {
-    text-overflow: ellipsis;
-  }
-  .carte:hover .animation_check {
+  .carte__prix:hover .animation_check {
     margin-right: -10px;
-    margin-left: 5px;
   }
   @-webkit-keyframes affichage {
     0% {

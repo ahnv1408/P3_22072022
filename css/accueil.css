@@ -17,8 +17,8 @@ a {
   height: 100%;
   inset: 0;
   opacity: 0.9;
-  -webkit-animation: chargeur 4s;
-          animation: chargeur 4s;
+  -webkit-animation: background-loader 3s;
+          animation: background-loader 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -28,6 +28,7 @@ a {
   border: 16px solid #9356DC;
   width: 200px;
   height: 200px;
+  margin-bottom: 10%;
   border-top-color: #FF79DA;
   border-bottom-color: #99E2D0;
   border-radius: 50%;
@@ -35,8 +36,11 @@ a {
           animation: spinner 3s;
 }
 
-@-webkit-keyframes chargeur {
+@-webkit-keyframes background-loader {
   0% {
+    transform: scale(1);
+  }
+  75% {
     transform: scale(1);
   }
   100% {
@@ -44,8 +48,11 @@ a {
   }
 }
 
-@keyframes chargeur {
+@keyframes background-loader {
   0% {
+    transform: scale(1);
+  }
+  75% {
     transform: scale(1);
   }
   100% {
@@ -102,8 +109,20 @@ a {
   align-items: center;
   margin-top: 2%;
 }
+.recherche_restaurant h3 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.recherche_restaurant .p_deux_recherche {
+  margin-bottom: 3%;
+}
+.recherche_restaurant p {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
 .recherche_restaurant input {
   padding: 1%;
+  margin-top: 3%;
   border-radius: 30px 30px 30px 30px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -296,6 +315,7 @@ footer a {
     text-shadow: none;
     background-color: rgb(230, 225, 225);
     box-shadow: 0px 0px 10px 0px;
+    margin-bottom: 0%;
     width: 95%;
     height: 60px;
     margin-top: 7%;
@@ -305,11 +325,19 @@ footer a {
     margin-right: 3%;
   }
   .recherche_restaurant {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0%;
     background-color: #F2F2F2;
+  }
+  .recherche_restaurant h3 {
+    margin-left: 5%;
+  }
+  .recherche_restaurant p {
+    margin-bottom: 0%;
+    margin-top: 0%;
+    margin-left: 7%;
+  }
+  .recherche_restaurant .reservez {
+    margin-top: 5%;
   }
   .recherche_restaurant input {
     padding: 4%;
@@ -317,6 +345,7 @@ footer a {
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     border: none;
+    margin-top: 7%;
     margin-bottom: 10%;
     box-shadow: 0px 10px 10px 0px;
   }
