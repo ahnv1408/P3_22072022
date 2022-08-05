@@ -9,6 +9,65 @@ a {
   text-decoration: none;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100%;
+  inset: 0;
+  opacity: 0.9;
+  -webkit-animation: chargeur 4s;
+          animation: chargeur 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.loader::after {
+  content: "";
+  display: flex;
+  border: 16px solid #9356DC;
+  width: 200px;
+  height: 200px;
+  border-top-color: #FF79DA;
+  border-bottom-color: #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: spinner 3s;
+          animation: spinner 3s;
+}
+
+@-webkit-keyframes chargeur {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes chargeur {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(760deg) scale(1);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(760deg) scale(1);
+  }
+}
 .h h1 {
   display: flex;
   justify-content: center;
@@ -89,7 +148,7 @@ a {
   background-color: #e2d5f1;
 }
 .fonctionnement__icon {
-  padding-top: 4.5%;
+  padding-top: 8%;
   margin-right: 5%;
   margin-left: 5%;
   color: grey;
@@ -170,23 +229,20 @@ a {
 }
 .restaurants__carte__bas .heart .jauge {
   position: absolute;
-  top: 178px;
+  top: 380px;
 }
 .restaurants__carte__bas .heart .jauge_remplissage {
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
   position: absolute;
-  top: 178px;
+  top: 380px;
   opacity: 0;
   color: transparent;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
-.restaurants__carte__bas .heart:active .jauge_remplissage {
+.restaurants__carte__bas .heart:hover .jauge_remplissage {
   opacity: 1;
-}
-.restaurants__carte__bas .heart:active .jauge {
-  opacity: 0;
 }
 .restaurants .nouveau::before {
   content: "Nouveau";
@@ -215,6 +271,7 @@ footer i {
 footer a {
   margin-left: 4%;
   margin-top: 1%;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -356,6 +413,12 @@ footer a {
     width: 50px;
     padding-top: 8%;
   }
+  .restaurants__carte__bas .jauge {
+    top: 400px;
+  }
+  .restaurants__carte__bas .jauge_remplissage {
+    top: 400px;
+  }
   .restaurants .nouveau::before {
     content: "Nouveau";
     position: absolute;
@@ -403,5 +466,11 @@ footer a {
   }
   .restaurants__carte__bas h3 {
     margin-top: 4%;
+  }
+  .restaurants__carte__bas .jauge {
+    top: 250px;
+  }
+  .restaurants__carte__bas .jauge_remplissage {
+    bottom: 250px;
   }
 }/*# sourceMappingURL=accueil.css.map */
