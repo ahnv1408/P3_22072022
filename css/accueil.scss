@@ -7,6 +7,59 @@ body {
 
 a {
     text-decoration: none;
+    
+}
+
+// LOADING SPINNER 
+
+
+.loader {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100%;
+    inset: 0;
+    opacity: 0.9;
+    animation: chargeur 4s;
+    animation-fill-mode: forwards;
+    &::after {
+        content: "";
+        display: flex;
+        border: 16px solid #9356DC;
+        width: 200px;
+        height: 200px;
+        border-top-color: #FF79DA;
+        border-bottom-color: #99E2D0;
+        border-radius: 50%;
+        animation: spinner 3s;
+    }
+
+}
+
+@keyframes chargeur {
+    0%{
+        transform: scale(1);
+       
+    }
+
+    100% {
+        transform: scale(0);
+      
+    }
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+
+
+
+    100% {
+        transform: rotate(760deg) scale(1);
+      
+    }
 }
 
 //  VERSION DESKTOP
@@ -100,7 +153,7 @@ a {
         }
     }
     &__icon {
-        padding-top: 4.5%;
+        padding-top: 8%;
         margin-right: 5%;
         margin-left: 5%;
         color: grey;
@@ -158,6 +211,7 @@ a {
         object-position: 70% 63%;
         border-radius: 20px 20px 0px 0px;
     }
+
     &__carte__bas {
         margin-bottom: 1%;
         margin-left: 3%;
@@ -181,27 +235,23 @@ a {
         }
         & .jauge {
             position: absolute;
-            top: 178px;
+            top: 380px;
         }
             
-            & .jauge_remplissage {    
+        & .jauge_remplissage {    
                 background-image:  linear-gradient(#FF79DA, #9356DC);
                 -webkit-background-clip: text;
                 background-clip: text;              
                 position: absolute;
-                top: 178px;
+                top: 380px;
                 opacity: 0;
                 color: transparent;
-                transition: all 2s ease-in-out;
-            }
+                transition: all 1s ease-in-out;
+        }
 
-            &:active .jauge_remplissage {
-                opacity: 1;
-            }
-            &:active .jauge {
-                opacity: 0;
-            }
-    
+        &:hover .jauge_remplissage {
+            opacity: 1;
+            } 
     }
     }
 
@@ -226,16 +276,17 @@ footer {
     display: flex;
     flex-direction: column;
     color: white;
-    h3 {
+    & h3 {
         font-family: 'Shrikhand', cursive ;
         margin-left: 5%;
     }
-    i {
+    & i {
         margin-right: 0.5%;
     }
-    a {
+    & a {
         margin-left: 4%;
         margin-top: 1%;
+        color: white;
     }
 }
 
@@ -405,8 +456,13 @@ footer {
             }
             & i {
                 width: 50px;
-                padding-top: 8%;
-                
+                padding-top: 8%;                
+            }
+            & .jauge {
+                top: 400px;
+            }
+            & .jauge_remplissage {
+                top: 400px;
             }
         }
 
@@ -469,7 +525,14 @@ footer {
             & h3 {
                 margin-top: 4%;
             }
+            & .jauge {
+                top: 250px;
+            }
+            & .jauge_remplissage {
+                bottom: 250px;
+            }
         }
+      
     }
 }
 
