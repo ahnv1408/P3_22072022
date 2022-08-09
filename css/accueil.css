@@ -61,18 +61,18 @@ a {
 }
 @-webkit-keyframes spinner {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(760deg) scale(1);
+    transform: rotate(760deg);
   }
 }
 @keyframes spinner {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(760deg) scale(1);
+    transform: rotate(760deg);
   }
 }
 .h h1 {
@@ -128,7 +128,7 @@ a {
   color: white;
   border: none;
   margin-bottom: 2%;
-  box-shadow: 0px 10px 10px 0px;
+  box-shadow: 3px 3px 3px gray;
 }
 .recherche_restaurant input:hover {
   background: linear-gradient(#f7a4df, #af7eec);
@@ -208,7 +208,7 @@ a {
 }
 .restaurants__carte {
   width: 40%;
-  height: 450px;
+  height: 350px;
   background-color: white;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0px 0px 7px 0px;
@@ -219,7 +219,7 @@ a {
 .restaurants__img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 350px;
+  height: 250px;
   width: 100%;
   -o-object-position: 70% 63%;
      object-position: 70% 63%;
@@ -241,26 +241,22 @@ a {
 .restaurants__carte__bas .heart {
   margin-right: 8%;
   padding-top: 6%;
-  cursor: pointer;
-}
-.restaurants__carte__bas .heart i {
-  position: absolute;
 }
 .restaurants__carte__bas .heart .jauge {
   position: absolute;
-  top: 380px;
+  top: 290px;
 }
 .restaurants__carte__bas .heart .jauge_remplissage {
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
   position: absolute;
-  top: 380px;
+  top: 290px;
   opacity: 0;
   color: transparent;
   transition: all 1s ease-in-out;
 }
-.restaurants__carte__bas .heart:hover .jauge_remplissage {
+.restaurants__carte__bas .heart .jauge_remplissage:hover {
   opacity: 1;
 }
 .restaurants .nouveau::before {
@@ -343,11 +339,11 @@ footer a {
     padding: 4%;
     border-radius: 30px 30px 30px 30px;
     background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 3px 3px 3px gray;
     color: white;
     border: none;
     margin-top: 7%;
     margin-bottom: 10%;
-    box-shadow: 0px 10px 10px 0px;
   }
   .fonctionnement__flex {
     display: block;
@@ -414,6 +410,31 @@ footer a {
     box-shadow: 0px 0px 7px 0px;
     margin-bottom: 5%;
     position: relative;
+  }
+  .restaurants__carte::before .heart {
+    margin-right: 8%;
+    padding-top: 6%;
+    cursor: pointer;
+  }
+  .restaurants__carte::before .heart i {
+    position: absolute;
+  }
+  .restaurants__carte::before .heart .jauge {
+    position: absolute;
+    top: 380px;
+  }
+  .restaurants__carte::before .heart .jauge_remplissage {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: absolute;
+    top: 380px;
+    opacity: 0;
+    color: transparent;
+    transition: all 1s ease-in-out;
+  }
+  .restaurants__carte::before .heart:hover .jauge_remplissage {
+    opacity: 1;
   }
   .restaurants__img {
     -o-object-fit: cover;
