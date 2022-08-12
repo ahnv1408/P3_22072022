@@ -18,20 +18,20 @@
     <div class="loader"><div class="spin"></div></div>
     <header class="h">
         <h1>ohmyfood</h1>
-        <div class="h__localisation">
+        <form class="h__localisation">
             <i class="fa-solid fa-location-dot h__icon"></i>
-            <p><strong>Paris, Belleville</strong></p>
-        </div>
+            <input class="h__input" type="search" value="Paris, Belleville">
+        </form>
     </header>
   
 
     <main>
         <article class="recherche_restaurant">
             <h3 class="reservez">Réservez le menu qui</h3>
-            <h3 class="p_deux_recherche"> vous convient</h3>
-            <p>Découvrez des restaurants d'exception,</p>
+            <h3> vous convient</h3>
+            <p class="p_un_recherche">Découvrez des restaurants d'exception,</p>
             <p> selectionnés par nos soins.</p>
-            <input type="button" value="Explorer nos restaurants">
+            <a href="#restaurants"><input  class="bouton_lien" type="button" value="Explorer nos restaurants"></a>
         </article>
 
         <section class="fonctionnement">
@@ -55,7 +55,7 @@
             </div>
         </section>
 
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
             <h1>Restaurants</h1>
             <div class="restaurants__flex">
                 <div class="restaurants__carte nouveau">

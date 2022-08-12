@@ -1,4 +1,3 @@
-// VERSION DESKTOP
 
 //  Animation affichage plat
 @keyframes affichage {
@@ -9,6 +8,222 @@
         opacity: 1;
     }
 }
+
+//  VERSION MOBILE 
+
+.h_restaurants {
+    display: flex;
+    flex-direction: row;
+    &__titre {
+        font-size: 30px;
+        margin-left: 20%;
+        text-shadow: none;
+    }
+    &__fleche {
+        padding-top: 9%;
+        padding-left: 5%;
+        font-weight: bold;
+    }
+}
+
+.bg_image{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;    
+}
+
+.img_enchante {
+    max-height: 15rem;
+    object-position: 70% 77%;
+}
+
+.titre {
+    font-size: 15px;
+    & .heart {
+        & .jauge {
+            top: -1px;
+            right: 30px;
+            position: absolute;
+        }
+        & .jauge_remplissage {
+            background-image:  linear-gradient(#FF79DA, #9356DC);
+            // Permet que le background s'affiche à l'intérieur du coeur
+            background-clip: text; 
+            top: -1px;
+            right: 30px;
+            position: absolute;             
+            opacity: 0;
+            color: transparent;           
+            &:hover {
+                opacity: 1;
+                transition: all 1s;
+            }
+        }        
+    }
+}
+
+.carte {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 5px 5px 15px 0px #dedddd;
+    padding-top: 1px;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    animation-name: affichage;
+    animation-duration: 2s;         
+    & .carte__texte {
+        width: 135%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        & h3 {
+            width: 100%;
+            margin-bottom: 0%;
+            margin-left: 2%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;                
+        }
+        & p {
+            width: 100%;
+            height: 50px;
+            margin-top: 4%;
+            margin-left: 1%;
+            margin-bottom: 0%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    &__prix {
+        display: flex;  
+        justify-content: flex-end;
+        width: 40%;     
+        margin-left: 2%;
+        & .price {
+            padding-top: 38%;
+            margin-right: 3%;
+            font-weight: bold;
+        }
+        & .animation_check {
+            width: 80px;
+            background-color: #99E2D0;
+            height: 100%;
+            border-radius: 0px 20px 20px 0px;
+            margin-right: -80px;
+            & .i_check {
+                display: grid;
+                place-items: center;
+                padding-top: 40px;
+                color: white; 
+            }
+        }     
+        }
+        &:hover .price {
+            padding-top: 33%;
+        }
+        &:hover .animation_check {
+            margin-right: 0%;
+            & .fas {
+                transform: rotate(-360deg);
+                transition: transform 500ms;
+            }
+        }
+    }
+
+
+.titre_plat {
+    margin-left: 5%;
+    margin-bottom: 0%;
+    margin-top: 10%;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+        padding: 5%;
+        border-radius: 30px 30px 30px 30px;
+        background: linear-gradient(#FF79DA, #9356DC);
+        color: white;
+        border: none;
+        margin-bottom: 12%;
+        margin-top: 12%;
+        box-shadow: 3px 3px 3px gray;
+        font-size: 100%;
+        &:hover {
+            background: linear-gradient(#f7a4df, #af7eec);
+        }
+    }
+}
+
+footer {
+    background-color: rgb(44, 40, 40);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    h3 {
+        font-family: 'Shrikhand', cursive ;
+        margin-left: 6%;
+    }
+    i {
+        margin-right: 4%;
+    }
+    a {
+        margin-left: 5%;
+        margin-top: 4%;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+section {
+    margin-top: -4rem;
+    border-radius: 50px 50px 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+
+}
+
+.trait_entrees {
+    background-color: #99E2D0;
+    width: 45px;
+    height: 4px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.trait_plats {
+    background-color: #99E2D0;
+    width: 38px;
+    height: 4px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.trait_desserts {
+    background-color: #99E2D0;
+    width: 45px;
+    height: 4px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+    // VERSION DESKTOP
 
 body {
     margin: 0%;
@@ -50,7 +265,8 @@ h1 {
     justify-content: space-around;
     border-radius: 40px 40px 40px 40px;
     & i {
-        padding-top: 11%;
+        padding-top: 8.5%;
+        margin-right: 5%;
     }
 }
 
@@ -69,15 +285,16 @@ h1 {
     // Carractéristiques animation affichage plats
     animation-name: affichage;
     animation-duration: 2s;
-    &__texte {
-        width: 50%;
-    }
-    & p {
-        margin-left: 2%;
-    }
-    & h3 {
-        margin-bottom: 0%;
-        margin-left: 2%;
+    & .carte__texte {
+        width: 50%;    
+        & p {
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+        & h3 {
+            margin-bottom: 0%;
+            margin-left: 2%;
+        }
     }
     &__prix {
         display: flex;  
@@ -85,6 +302,7 @@ h1 {
         width: 50%;     
         margin-left: 2%;
         & .price {
+            padding-top: 7%;
             margin-top: 3%;
             margin-right: 3%;
             font-weight: bold;
@@ -103,6 +321,9 @@ h1 {
             }
         }     
         }
+        &:hover .price {
+            padding-top: 7%;
+        }
         &:hover .animation_check {
             margin-right: 0%;
             & .fas {
@@ -114,6 +335,7 @@ h1 {
 
 .titre_plat {
     margin-left: 4%;
+    margin-top: 0%;
     margin-bottom: 0%;
 }
 
@@ -191,181 +413,7 @@ footer {
     }
 }
 
-
-//  VERSION MOBILE 
-
-@media (max-width: 768px) {
-
-
-.h_restaurants {
-    display: flex;
-    flex-direction: row;
-    &__titre {
-        font-size: 30px;
-        margin-left: 20%;
-        text-shadow: none;
-    }
-    &__fleche {
-        padding-top: 9%;
-        padding-left: 5%;
-        font-weight: bold;
-    }
-}
-
-.bg_image{
-    max-width: 100%;
-    max-height: 32rem;
-    width: 100%;
-    object-fit: cover;    
-}
-
-.img_enchante {
-    max-height: 15rem;
-    object-position: 70% 77%;
-}
-
-.titre {
-    font-size: 15px;
-    i {
-        padding-top: 8%;
-    }
-}
-
-
-.carte {
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 5px 5px 15px 0px #dedddd;
-    padding-top: 1px;
-    margin-bottom: 5%;
-    margin-left: 3%;
-    margin-right: 3%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    position: relative;
-    animation-name: affichage;
-    animation-duration: 2s;         
-    & .carte__texte {
-        width: 135%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        & h3 {
-            width: 100%;
-            margin-bottom: 0%;
-            margin-left: 2%;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;                
-        }
-        & p {
-            width: 100%;
-            height: 50px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    }
-    &__prix {
-        width: 40%;
-        margin-left: 0%;
-        margin-right: 2%;
-        & .price {
-            margin-top: 70%;
-            margin-left: 0;
-            margin-right: 20%;
-        }
-        & .animation_check {
-            margin-right: -107px;
-            width: 100px;
-            background-color: #99E2D0;
-            height: 100%;
-            border-radius: 0px 20px 20px 0px;
-        }
-        
-        &:hover {
-            & .animation_check {
-                margin-right: -10px;
-                // margin-left: 5px;
-            }
-        }
-    }
-}
-
-.titre_plat {
-    margin-left: 5%;
-    margin-bottom: 0%;
-    margin-top: 10%;
-}
-
-
-.bouton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    input {
-        padding: 5%;
-        border-radius: 30px 30px 30px 30px;
-        background: linear-gradient(#FF79DA, #9356DC);
-        color: white;
-        border: none;
-        margin-bottom: 12%;
-        margin-top: 12%;
-        box-shadow: 3px 3px 3px gray;
-        font-size: 100%;
-    }
-}
-
-footer {
-    background-color: rgb(44, 40, 40);
-    display: flex;
-    flex-direction: column;
-    color: white;
-    h3 {
-        font-family: 'Shrikhand', cursive ;
-        margin-left: 6%;
-    }
-    i {
-        margin-right: 4%;
-    }
-    a {
-        margin-left: 5%;
-        margin-top: 4%;
-    }
-}
-
-section {
-    margin-top: -4rem;
-    border-radius: 50px 50px 0 0;
-    background-color: #f6f6f6;
-    z-index: 1;
-    position: relative;
-
-}
-
-.trait_entrees {
-    background-color: #99E2D0;
-    width: 45px;
-    height: 4px;
-    margin-bottom: 5%;
-    margin-left: 5%;
-}
-
-.trait_plats {
-    background-color: #99E2D0;
-    width: 38px;
-    height: 4px;
-    margin-bottom: 5%;
-    margin-left: 5%;
-}
-
-.trait_desserts {
-    background-color: #99E2D0;
-    width: 45px;
-    height: 4px;
-    margin-bottom: 5%;
-    margin-left: 5%;
-}
+    
 }
 
 //  VERSION TABLETTE
@@ -375,6 +423,12 @@ section {
     .h_restaurants {
         &__titre {
             margin-left: 23%;
+        }
+    }
+
+    .titre {
+        & i {
+            padding-top: 9.5%;
         }
     }
 
