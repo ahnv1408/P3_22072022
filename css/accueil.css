@@ -293,7 +293,7 @@ footer a {
     justify-content: center;
     text-shadow: 1px 1px 1px #9356DC;
     color: white;
-    font-size: 300%;
+    font-size: 350%;
     margin-top: 0%;
     margin-bottom: 0%;
     padding-top: 3%;
@@ -307,13 +307,13 @@ footer a {
     width: 100%;
     height: 80px;
     margin-top: 0%;
-    padding-top: 2%;
+    padding-top: 0%;
     padding-bottom: 2%;
   }
   .h__icon {
     padding-top: 2.8%;
     margin-right: 1%;
-    margin-left: 44.5%;
+    margin-left: 46%;
   }
   .h p {
     padding-top: 0.7%;
@@ -329,6 +329,7 @@ footer a {
     margin-top: 0%;
     margin-bottom: 0%;
     margin-left: 2%;
+    font-size: 50px;
   }
   .recherche_restaurant .reservez {
     margin-top: 2%;
@@ -340,8 +341,9 @@ footer a {
     margin-top: 0%;
     margin-bottom: 2%;
     margin-left: 3%;
+    font-size: 30px;
   }
-  .recherche_restaurant p.p_un_recherche {
+  .recherche_restaurant.p_un_recherche {
     margin-top: 2%;
   }
   .recherche_restaurant input {
@@ -382,7 +384,7 @@ footer a {
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 0px 7px 0px;
     width: 27%;
-    height: 60px;
+    height: 70px;
     margin-top: 5%;
     margin-bottom: 1%;
     margin-right: 3%;
@@ -392,6 +394,7 @@ footer a {
     background-color: #e2d5f1;
   }
   .fonctionnement__icon {
+    padding-top: 4.5%;
     margin-right: 5%;
     margin-left: 5%;
     color: grey;
@@ -432,18 +435,18 @@ footer a {
   }
   .restaurants__carte {
     width: 40%;
-    height: 320px;
+    height: 400px;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 0px 7px 0px;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     margin-left: 3%;
     position: relative;
   }
   .restaurants__img {
     -o-object-fit: cover;
        object-fit: cover;
-    height: 250px;
+    height: 330px;
     width: 100%;
     -o-object-position: 70% 63%;
        object-position: 70% 63%;
@@ -468,7 +471,7 @@ footer a {
   }
   .restaurants__carte__bas .heart .jauge {
     position: absolute;
-    top: 250px;
+    top: 300px;
     color: black;
   }
   .restaurants__carte__bas .heart .jauge_remplissage {
@@ -476,7 +479,7 @@ footer a {
     -webkit-background-clip: text;
             background-clip: text;
     position: absolute;
-    top: 250px;
+    top: 300px;
     opacity: 0;
     color: transparent;
   }
@@ -513,7 +516,7 @@ footer a {
     color: white;
   }
 }
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 992px) and (min-width: 768px) and (max-width: 992px) {
   .fonctionnement__carte {
     margin-bottom: 2%;
   }
