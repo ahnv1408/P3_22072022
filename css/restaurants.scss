@@ -42,7 +42,6 @@
     font-size: 15px;
     & .heart {
         & .jauge {
-            top: -15px;
             right: 50px;
             position: absolute;
         }
@@ -50,7 +49,6 @@
             background-image:  linear-gradient(#FF79DA, #9356DC);
             // Permet que le background s'affiche à l'intérieur du coeur
             background-clip: text; 
-            top: -15px;
             right: 50px;
             position: absolute;             
             opacity: 0;
@@ -445,8 +443,11 @@ footer {
     }
 
     .titre {
-        & i {
-            padding-top: 9.5%;
+        & .jauge {
+            top: -10px;
+        }
+        & .jauge_remplissage {
+            top: -10px;
         }
     }
 

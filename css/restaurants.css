@@ -47,7 +47,6 @@
   font-size: 15px;
 }
 .titre .heart .jauge {
-  top: -15px;
   right: 50px;
   position: absolute;
 }
@@ -55,7 +54,6 @@
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
-  top: -15px;
   right: 50px;
   position: absolute;
   opacity: 0;
@@ -419,8 +417,11 @@ section {
   .h_restaurants__titre {
     margin-left: 23%;
   }
-  .titre i {
-    padding-top: 9.5%;
+  .titre .jauge {
+    top: -10px;
+  }
+  .titre .jauge_remplissage {
+    top: -10px;
   }
   .carte:hover .animation_check {
     margin-right: -18px;
