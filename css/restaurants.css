@@ -47,16 +47,16 @@
   font-size: 15px;
 }
 .titre .heart .jauge {
-  top: -1px;
-  right: 30px;
+  top: -15px;
+  right: 50px;
   position: absolute;
 }
 .titre .heart .jauge_remplissage {
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
-  top: -1px;
-  right: 30px;
+  top: -15px;
+  right: 50px;
   position: absolute;
   opacity: 0;
   color: transparent;
@@ -237,12 +237,12 @@ section {
     flex-direction: row;
   }
   .h_restaurants__titre {
-    font-size: 80px;
-    margin-left: 25%;
+    font-size: 90px;
+    margin-left: 30%;
     text-shadow: 1px 1px 1px #9356DC;
   }
   .h_restaurants__fleche {
-    padding-top: 10%;
+    padding-top: 7%;
     padding-left: 5%;
     font-weight: bold;
   }
@@ -255,14 +255,29 @@ section {
        object-fit: cover;
   }
   .titre {
-    font-size: 50px;
+    font-size: 40px;
+    margin-left: 8%;
     display: flex;
     justify-content: space-around;
-    border-radius: 40px 40px 40px 40px;
   }
-  .titre i {
-    padding-top: 8.5%;
-    margin-right: 5%;
+  .titre .heart .jauge {
+    top: 60px;
+    right: 200px;
+    position: absolute;
+  }
+  .titre .heart .jauge_remplissage {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+            background-clip: text;
+    top: 60px;
+    right: 200px;
+    position: absolute;
+    opacity: 0;
+    color: transparent;
+  }
+  .titre .heart .jauge_remplissage:hover {
+    opacity: 1;
+    transition: all 1s;
   }
   .carte {
     display: flex;
