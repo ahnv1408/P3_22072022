@@ -16,6 +16,7 @@ a {
   background-color: #ffffff;
   height: 100%;
   inset: 0;
+  z-index: 1;
   opacity: 0.9;
   -webkit-animation: background-loader 3s;
           animation: background-loader 3s;
@@ -87,7 +88,6 @@ body {
 
 .h h1 {
   font-family: "Shrikhand", cursive;
-  text-shadow: none;
   padding-top: 0%;
   display: flex;
   justify-content: center;
@@ -268,10 +268,14 @@ body {
 
 footer {
   background-color: rgb(44, 40, 40);
-  display: flex;
-  flex-direction: column;
   color: white;
   padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+footer .liens_footer {
+  display: flex;
+  flex-direction: column;
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
@@ -498,13 +502,17 @@ footer a {
     color: green;
   }
   footer {
-    background-color: rgb(44, 40, 40);
     display: flex;
     flex-direction: column;
-    color: white;
+  }
+  footer .liens_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
   footer h3 {
-    font-family: "Shrikhand", cursive;
+    display: flex;
+    justify-content: center;
     margin-left: 5%;
   }
   footer i {

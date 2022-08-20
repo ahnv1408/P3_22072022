@@ -20,6 +20,7 @@ a {
     background-color: #ffffff;
     height: 100%;
     inset: 0;
+    z-index: 1;
     opacity: 0.9;
     animation: background-loader 3s;
     animation-fill-mode: forwards;
@@ -60,7 +61,7 @@ a {
     }
 }
 
-// SMARTPHONE PAGE ACCUEIL
+// VERSION MOBILE PAGE ACCUEIL
 
 html {
     margin: 0;
@@ -97,7 +98,6 @@ body {
 .h {
     & h1 {
         font-family: 'Shrikhand', cursive;
-        text-shadow: none;
         padding-top: 0%;
         display: flex;
         justify-content: center;
@@ -279,19 +279,23 @@ body {
 
 footer {
     background-color: rgb(44, 40, 40);
-    display: flex;
-    flex-direction: column;
     color: white;
     padding-bottom: 5%;
-    h3 {
+    display: flex;
+    flex-direction: column;
+    & .liens_footer {
+        display: flex;
+        flex-direction: column;
+    }
+    & h3 {
         font-family: 'Shrikhand', cursive ;
         display: block;
         margin-left: 7%;
     }
-    i {
+    & i {
         margin-right: 4%;
     }
-    a {
+    & a {
         margin-left: 5%;
         margin-top: 4%;
         color: white;
@@ -529,12 +533,16 @@ footer {
 }
 
 footer {
-    background-color: rgb(44, 40, 40);
     display: flex;
     flex-direction: column;
-    color: white;
+    & .liens_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
     & h3 {
-        font-family: 'Shrikhand', cursive ;
+        display: flex;
+        justify-content: center;
         margin-left: 5%;
     }
     & i {
